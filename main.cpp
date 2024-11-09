@@ -49,6 +49,7 @@ void printToFile(string directory) {
     vector<int> contents = makeArray(raw);
     int sum = 0, count = 0;
     double median = 0, mean = 0;
+    int mode = 0;
 
     // sum
     for (int i : contents) {
@@ -68,13 +69,34 @@ void printToFile(string directory) {
         median = contents[count / 2];
     }
 
-    //mean
+    // mean
     mean = sum/count;
+    
+    // mode
+    vector<int> instances = {};
+    int instance;
+    for (int i = 0; i < count; i++) {
+        instance = 0;
+        for (int x = 0; x < count; x++) {
+            if (contents[i] == contents[x]) {
+                instance++;
+            }
+        }
+        instances.insert(instances.end(), instance);
+    }
+    int mostCommon = 0;
+    for (int q = 0; q < instances.size(); q++) {
+        if (instances[q] > instances[mostCommon]) {
+            mostCommon = q;
+        }
+    }
+    mode = contents[mostCommon];
 
     cout << "Sum: " << sum << endl;
     cout << "Count: " << count << endl;
     cout << "Median: " << median << endl;
     cout << "Mean: " << mean << endl;
+    cout << "Mode: " << mode << endl;
 }
 
 int main() {

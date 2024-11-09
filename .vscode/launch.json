@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/home/kamui_kazi/github-classroom/Harper-College-Vandrevala-Classrooms/meet-in-the-middle-la59021",
-      "program": "/home/kamui_kazi/github-classroom/Harper-College-Vandrevala-Classrooms/meet-in-the-middle-la59021/build/Debug/outDebug",
+      "program": "/home/kamui_kazi/github-classroom/Harper-College-Vandrevala-Classrooms/meet-in-the-middle-la59021/a.out",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
